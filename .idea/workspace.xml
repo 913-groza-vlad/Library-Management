@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e3af898-bf76-46a2-b2c6-e1babfd4c9bb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LibraryManagement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/FineCalculationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/FixedRateFineStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/PercentageFineStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/VariableRateFineStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibraryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Customer/CustomerFineManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Factory/BookFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Factory/ComicFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Factory/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Factory/MagazineFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Factory/MovieFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/Comic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/ILibraryItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/LibraryItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/Magazine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/MovieDVD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/ItemBorrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Observer/BorrowingManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Observer/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Observer/Subscriber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BorrowItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/IRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/UI.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2e0OrP9A1olvwpjjVMHMVzULQ1J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/SSVV/LabProjectV01&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LibraryManagement" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e3af898-bf76-46a2-b2c6-e1babfd4c9bb" name="Changes" comment="" />
+      <created>1711038231387</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711038231387</updated>
+      <workItem from="1711038232465" duration="4876000" />
+      <workItem from="1711104525087" duration="5044000" />
+      <workItem from="1711550423826" duration="76000" />
+      <workItem from="1711654194639" duration="4613000" />
+      <workItem from="1711703243130" duration="2131000" />
+      <workItem from="1712492473952" duration="11000" />
+      <workItem from="1712583970081" duration="13619000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
