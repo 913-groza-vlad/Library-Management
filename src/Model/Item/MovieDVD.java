@@ -56,11 +56,13 @@ public class MovieDVD extends LibraryItem {
     @Override
     public String toString() {
         return "MovieDVD{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", director='" + director + '\'' +
                 ", year=" + year +
                 ", genre='" + genre + '\'' +
                 ", runtime=" + runtime +
+                ", available copies=" + numberOfCopies +
                 '}';
     }
 }

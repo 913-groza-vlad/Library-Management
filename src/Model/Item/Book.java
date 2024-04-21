@@ -59,12 +59,14 @@ public class Book extends LibraryItem {
     @Override
     public String toString() {
         return "Book{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", year=" + year +
                 ", genre='" + genre + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", pageCount=" + pageCount +
+                ", available copies=" + numberOfCopies +
                 '}';
     }
 }

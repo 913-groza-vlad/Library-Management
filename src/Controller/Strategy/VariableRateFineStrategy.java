@@ -10,7 +10,7 @@ public class VariableRateFineStrategy implements FineCalculationStrategy {
     @Override
     public double calculateFine(int daysPastDue) {
         for (int i = 0; i < daysPastDue; i++) {
-            initialFineRate += 0.1 * initialFineRate;
+            initialFineRate += 0.3 * initialFineRate;
         }
 
         return initialFineRate;

@@ -58,9 +58,9 @@ public class Customer implements Subscriber {
     @Override
     public void update(ILibraryItem item) {
         if (item.getNumberOfCopies() > 0)
-            System.out.println("Customer " + name + "! There are only " + item.getNumberOfCopies() + " copies of " + item.getTitle());
+            System.out.println("\nCustomer " + name + "! There are only " + item.getNumberOfCopies() + " copies of " + item.getTitle());
         else
-            System.out.println("Customer " + name + "! " + item.getTitle() + " is not available");
+            System.out.println("\nCustomer " + name + "! " + item.getTitle() + " is no longer available");
     }
 
     @Override
@@ -81,5 +81,11 @@ public class Customer implements Subscriber {
     public void returnItem(ILibraryItem item) {
         borrowedItems.remove(item);
         item.incrementCopies();
+    }
+
+    public void addItemToWishlist(ILibraryItem item) {
+        if (wishlist.contains(item))
+            throw new IllegalArgumentException("Item already in wishlist");
+        wishlist.add(item);
     }
 }

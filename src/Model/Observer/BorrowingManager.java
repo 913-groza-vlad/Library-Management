@@ -3,27 +3,35 @@ package Model.Observer;
 import Model.Customer.Customer;
 import Model.Item.ILibraryItem;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class BorrowingManager {
     private Map<ILibraryItem, List<Customer>> subscribers;
 
-    void subscribe(ILibraryItem item, Customer customer) {
+    public BorrowingManager() {
+        this.subscribers = new HashMap<>();
+    }
+
+    public void subscribe(ILibraryItem item, Customer customer) {
         if (subscribers.containsKey(item)) {
             subscribers.get(item).add(customer);
         } else {
-            subscribers.put(item, List.of(customer));
+            List<Customer> customers = new ArrayList<>();
+            customers.add(customer);
+            subscribers.put(item, customers);
         }
     }
 
-    void unsubscribe(ILibraryItem item, Customer customer) {
+    public void unsubscribe(ILibraryItem item, Customer customer) {
         if (subscribers.containsKey(item)) {
             subscribers.get(item).remove(customer);
         }
     }
 
-    void notifySubscribers(ILibraryItem item) {
+    public void notifySubscribers(ILibraryItem item) {
         if (subscribers.containsKey(item)) {
             for (Customer customer : subscribers.get(item)) {
                 customer.update(item);

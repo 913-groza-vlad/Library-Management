@@ -10,13 +10,24 @@ public class Manager {
         this.borrowingManager = borrowingManager;
     }
 
+    public BorrowingManager getBorrowingManager() {
+        return borrowingManager;
+    }
+
     public void borrowItem(ILibraryItem item, Customer customer) {
         customer.borrowItem(item);
         borrowingManager.notifySubscribers(item);
     }
 
     public void returnItem(ILibraryItem item, Customer customer) {
+        if (!customer.getBorrowedItems().contains(item))
+            throw new IllegalArgumentException("\nCustomer, " + customer.getName()  + ", you do not have " + item.getTitle());
+
         customer.returnItem(item);
         borrowingManager.notifySubscribers(item);
+    }
+
+    public void addItemToWishlist(Customer customer, ILibraryItem item) {
+        customer.addItemToWishlist(item);
     }
 }

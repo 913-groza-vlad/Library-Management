@@ -1,10 +1,12 @@
 package Controller;
 
 import Model.Customer.Customer;
+import Model.Customer.CustomerFineManager;
 import Model.Item.ILibraryItem;
 import Model.ItemBorrow;
 import Model.Observer.Manager;
 import Repository.BorrowItemRepository;
+import Repository.FineManagerRepository;
 import Repository.IRepository;
 
 import java.time.LocalDate;
@@ -15,12 +17,14 @@ public class Controller {
     IRepository<ILibraryItem> itemRepository;
     IRepository<Customer> customerRepository;
     BorrowItemRepository borrowItemRepository;
+    IRepository<CustomerFineManager> fineManagerRepository;
     Manager manager;
 
-    public Controller(IRepository<ILibraryItem> itemRepository, IRepository<Customer> customerRepository, BorrowItemRepository borrowItemRepository, Manager manager) {
+    public Controller(IRepository<ILibraryItem> itemRepository, IRepository<Customer> customerRepository, BorrowItemRepository borrowItemRepository, IRepository<CustomerFineManager> fineManagerRepository, Manager manager) {
         this.itemRepository = itemRepository;
         this.customerRepository = customerRepository;
         this.borrowItemRepository = borrowItemRepository;
+        this.fineManagerRepository = fineManagerRepository;
         this.manager = manager;
     }
 
@@ -61,6 +65,17 @@ public class Controller {
 
     public void returnItem(ILibraryItem item, Customer customer) {
         manager.returnItem(item, customer);
+        ItemBorrow returnedItem = borrowItemRepository.getBorrowedItem(customer, item);
+        CustomerFineManager customerFineManager = fineManagerRepository.getElem(customer.getId());
+        double fine = customerFineManager.calculateFine(returnedItem.getExpectedReturnDate().until(LocalDate.now()).getDays());
+        if (returnedItem.getExpectedReturnDate().isBefore(LocalDate.now()))
+            System.out.println("\nCustomer " + customer.getName() + "! You have returned the item '" + item.getTitle() + "' late. You will be charged a fine of $" + fine);
         borrowItemRepository.removeElem(borrowItemRepository.getBorrowedItem(customer, item));
+    }
+
+
+    public void addItemToWishlist(Customer customer, ILibraryItem item) {
+        manager.addItemToWishlist(customer, item);
+        manager.getBorrowingManager().subscribe(item, customer);
     }
 }

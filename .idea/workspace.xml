@@ -4,42 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e3af898-bf76-46a2-b2c6-e1babfd4c9bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibraryManagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/FineCalculationStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/FixedRateFineStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/PercentageFineStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Strategy/VariableRateFineStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibraryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Customer/CustomerFineManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Factory/BookFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Factory/ComicFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Factory/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Factory/MagazineFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Factory/MovieFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Item/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Item/Comic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Item/ILibraryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Item/LibraryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Item/Magazine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Item/MovieDVD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/ItemBorrow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Observer/BorrowingManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Observer/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Observer/Subscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/BorrowItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/IRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/UI.java" afterDir="false" />
+    <list default="true" id="8e3af898-bf76-46a2-b2c6-e1babfd4c9bb" name="Changes" comment="Commit Design Pattern Project">
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/LibraryItemDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Item/SpecialItemDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/FineManagerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibraryManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Strategy/PercentageFineStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Strategy/PercentageFineStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Strategy/VariableRateFineStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Strategy/VariableRateFineStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Customer/CustomerFineManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Customer/CustomerFineManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Item/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Item/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Item/Comic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Item/Comic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Item/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Item/Magazine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Item/MovieDVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Item/MovieDVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Observer/BorrowingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Observer/BorrowingManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Observer/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Observer/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,14 +51,29 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JAVA_HOME&quot;: &quot;D:\\JDK&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cores_evosuite_param&quot;: &quot;1&quot;,
+    &quot;evosuite_gui_dialog_height&quot;: &quot;600&quot;,
+    &quot;evosuite_gui_dialog_width&quot;: &quot;600&quot;,
+    &quot;evosuite_jar_location&quot;: &quot;D:\\SSVV\\Seminar\\evosuite-1.0.6.jar&quot;,
+    &quot;execution_mode&quot;: &quot;MVN&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/SSVV/LabProjectV01&quot;,
+    &quot;memory_evosuite_param&quot;: &quot;2000&quot;,
+    &quot;mvn_location&quot;: &quot;&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;target_folder_evosuite_param&quot;: &quot;src/evo&quot;,
+    &quot;time_evosuite_param&quot;: &quot;3&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -107,11 +105,28 @@
       <workItem from="1711654194639" duration="4613000" />
       <workItem from="1711703243130" duration="2131000" />
       <workItem from="1712492473952" duration="11000" />
-      <workItem from="1712583970081" duration="13619000" />
+      <workItem from="1712583970081" duration="14297000" />
+      <workItem from="1712925213510" duration="764000" />
+      <workItem from="1712956582656" duration="322000" />
+      <workItem from="1713182533221" duration="993000" />
+      <workItem from="1713699650760" duration="12625000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit Design Pattern Project">
+      <option name="closed" value="true" />
+      <created>1712606575312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712606575312</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit Design Pattern Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Design Pattern Project" />
   </component>
 </project>

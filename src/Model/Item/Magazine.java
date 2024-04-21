@@ -50,10 +50,12 @@ public class Magazine extends LibraryItem {
     @Override
     public String toString() {
         return "Magazine{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", year=" + year +
                 ", issueNumber=" + issueNumber +
+                ", available copies=" + numberOfCopies +
                 '}';
     }
 }

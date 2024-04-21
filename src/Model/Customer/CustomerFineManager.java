@@ -21,4 +21,7 @@ public class CustomerFineManager {
         return fineCalculationStrategy.calculateFine(daysPastDue);
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
 }

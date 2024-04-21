@@ -1,14 +1,16 @@
 import Controller.Controller;
+import Controller.Strategy.FixedRateFineStrategy;
+import Controller.Strategy.PercentageFineStrategy;
+import Controller.Strategy.VariableRateFineStrategy;
 import Model.Customer.Customer;
+import Model.Customer.CustomerFineManager;
 import Model.Factory.*;
 import Model.Item.ILibraryItem;
-import Model.ItemBorrow;
+import Model.Item.LibraryItemDecorator;
+import Model.Item.SpecialItemDecorator;
 import Model.Observer.BorrowingManager;
 import Model.Observer.Manager;
-import Repository.BorrowItemRepository;
-import Repository.CustomerRepository;
-import Repository.IRepository;
-import Repository.ItemRepository;
+import Repository.*;
 import View.UI;
 
 public class LibraryManager {
@@ -28,15 +30,16 @@ public class LibraryManager {
         IRepository<ILibraryItem> itemRepository = new ItemRepository();
         IRepository<Customer> customerRepository = new CustomerRepository();
         BorrowItemRepository borrowItemRepository = new BorrowItemRepository();
+        IRepository<CustomerFineManager> fineManagerRepository = new FineManagerRepository();
 
         BorrowingManager borrowingManager = new BorrowingManager();
         Manager manager = new Manager(borrowingManager);
 
-        Controller controller = new Controller(itemRepository, customerRepository, borrowItemRepository, manager);
+        Controller controller = new Controller(itemRepository, customerRepository, borrowItemRepository, fineManagerRepository, manager);
         UI view = new UI(controller);
 
         addItems(itemRepository);
-        addCustomers(customerRepository);
+        addCustomers(customerRepository, fineManagerRepository);
 
         view.start();
     }
@@ -59,6 +62,9 @@ public class LibraryManager {
         ILibraryItem comic1 = comicFactory.createLibraryItem("The Amazing of SpiderMan", "Stan Lee", 1961, "Marvel", 123, 1, 49);
         ILibraryItem comic2 = comicFactory.createLibraryItem("Batman", "Bob Kane", 1939, "DC", 456, 2, 25);
         ILibraryItem comic3 = comicFactory.createLibraryItem("Superman", "Jerry Siegel", 1938, "DC", 789, 3, 18);
+
+        ILibraryItem comicDecorator = new SpecialItemDecorator(comic3, "Limited edition, only few copies printed", 2);
+        itemRepository.addElem(comicDecorator);
 
         Factory movieFactory = new MovieFactory();
         ILibraryItem movie1 = movieFactory.createLibraryItem("The Shawshank Redemption", "Frank Darabont", 1994, "Drama", 142, 1, 40);
@@ -84,15 +90,30 @@ public class LibraryManager {
         itemRepository.addElem(movie4);
     }
 
-    private void addCustomers(IRepository<Customer> customerRepository) {
-        Customer customer1 = new Customer(1, "John Doe", "", "", "");
-        Customer customer2 = new Customer(2, "Max", "", "", "");
-        Customer customer3 = new Customer(3, "Alice", "", "", "");
+    private void addCustomers(IRepository<Customer> customerRepository, IRepository<CustomerFineManager> fineManagerRepository) {
+        Customer customer1 = new Customer(1, "John Doe", "Str. Main", "+40711223344", "johndoe@gmail.com");
+        CustomerFineManager customer1FineManager = new CustomerFineManager(customer1);
+        customer1FineManager.setFineCalculationStrategy(new FixedRateFineStrategy(10.5));
+
+        Customer customer2 = new Customer(2, "Max", "Str. Second", "+40711223355", "max@yahoo.com");
+        CustomerFineManager customer2FineManager = new CustomerFineManager(customer2);
+        customer2FineManager.setFineCalculationStrategy(new VariableRateFineStrategy(9.5));
+
+        Customer customer3 = new Customer(3, "Alice", "Str. Third", "+40711223366", "alice@gmail.com");
+        CustomerFineManager customer3FineManager = new CustomerFineManager(customer3);
+        customer3FineManager.setFineCalculationStrategy(new PercentageFineStrategy(15, 16));
+
         Customer customer4 = new Customer(4, "Bob", "", "", "");
+        CustomerFineManager customer4FineManager = new CustomerFineManager(customer4);
+        customer4FineManager.setFineCalculationStrategy(new VariableRateFineStrategy(8.5));
 
         customerRepository.addElem(customer1);
         customerRepository.addElem(customer2);
         customerRepository.addElem(customer3);
         customerRepository.addElem(customer4);
+        fineManagerRepository.addElem(customer1FineManager);
+        fineManagerRepository.addElem(customer2FineManager);
+        fineManagerRepository.addElem(customer3FineManager);
+        fineManagerRepository.addElem(customer4FineManager);
     }
 }

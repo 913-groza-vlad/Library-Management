@@ -54,11 +54,13 @@ public class Comic extends LibraryItem {
     @Override
     public String toString() {
         return "Comic{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", year=" + year +
                 ", genre='" + genre + '\'' +
                 ", issueNumber=" + issueNumber +
+                ", available copies=" + numberOfCopies +
                 '}';
     }
 }
