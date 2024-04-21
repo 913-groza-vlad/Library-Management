@@ -57,14 +57,13 @@ public class LibraryManager {
         ILibraryItem magazine1 = magazineFactory.createLibraryItem("National Geographic", "National Geographic Society", 1888, 1, 1, 17);
         ILibraryItem magazine2 = magazineFactory.createLibraryItem("Time", "Time Inc.", 1923, 2, 2, 15);
         ILibraryItem magazine3 = magazineFactory.createLibraryItem("The New Yorker", "Advance Publications", 1925, 3, 3, 30);
+        ILibraryItem magazineDecorator = new SpecialItemDecorator(magazine3, "Extremely rare edition, containing high quality prints", 3);
 
         Factory comicFactory = new ComicFactory();
         ILibraryItem comic1 = comicFactory.createLibraryItem("The Amazing of SpiderMan", "Stan Lee", 1961, "Marvel", 123, 1, 49);
         ILibraryItem comic2 = comicFactory.createLibraryItem("Batman", "Bob Kane", 1939, "DC", 456, 2, 25);
         ILibraryItem comic3 = comicFactory.createLibraryItem("Superman", "Jerry Siegel", 1938, "DC", 789, 3, 18);
-
         ILibraryItem comicDecorator = new SpecialItemDecorator(comic3, "Limited edition, only few copies printed", 2);
-        itemRepository.addElem(comicDecorator);
 
         Factory movieFactory = new MovieFactory();
         ILibraryItem movie1 = movieFactory.createLibraryItem("The Shawshank Redemption", "Frank Darabont", 1994, "Drama", 142, 1, 40);
@@ -88,6 +87,8 @@ public class LibraryManager {
         itemRepository.addElem(movie2);
         itemRepository.addElem(movie3);
         itemRepository.addElem(movie4);
+        itemRepository.addElem(comicDecorator);
+        itemRepository.addElem(magazineDecorator);
     }
 
     private void addCustomers(IRepository<Customer> customerRepository, IRepository<CustomerFineManager> fineManagerRepository) {

@@ -13,7 +13,7 @@ public class SpecialItemDecorator implements LibraryItemDecorator {
 
     @Override
     public int getNumberOfCopies() {
-        return wrappee.getNumberOfCopies();
+        return 1;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class SpecialItemDecorator implements LibraryItemDecorator {
 
     @Override
     public String toString() {
-        return "SpecialItemDecorator{" + wrappee.getClass().getName() + ": " +
+        return "SpecialItem{" + wrappee.getClass().getName().substring(wrappee.getClass().getName().lastIndexOf(".") + 1) + ": " +
                 wrappee.getTitle() +
                 ", description='" + description + '\'' +
                 ", editionNumber=" + editionNumber +
