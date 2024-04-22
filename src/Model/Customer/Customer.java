@@ -88,4 +88,10 @@ public class Customer implements Subscriber {
             throw new IllegalArgumentException("Item already in wishlist");
         wishlist.add(item);
     }
+
+    public void removeItemFromWishlist(ILibraryItem item) {
+        if (!wishlist.contains(item))
+            throw new IllegalArgumentException("Item not in wishlist");
+        wishlist.remove(item);
+    }
 }

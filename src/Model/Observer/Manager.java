@@ -30,4 +30,8 @@ public class Manager {
     public void addItemToWishlist(Customer customer, ILibraryItem item) {
         customer.addItemToWishlist(item);
     }
+
+    public void deleteItemFromWishlist(Customer customer, ILibraryItem item) {
+        customer.removeItemFromWishlist(item);
+    }
 }

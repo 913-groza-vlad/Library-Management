@@ -78,4 +78,9 @@ public class Controller {
         manager.addItemToWishlist(customer, item);
         manager.getBorrowingManager().subscribe(item, customer);
     }
+
+    public void removeItemFromWishlist(Customer customer, ILibraryItem item) {
+        manager.deleteItemFromWishlist(customer, item);
+        manager.getBorrowingManager().unsubscribe(item, customer);
+    }
 }
