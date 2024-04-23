@@ -82,7 +82,7 @@ public class UI {
             ILibraryItem item = controller.getItem(itemId);
             Customer customer = controller.getCustomer(customerId);
             controller.borrowItem(item, customer, startDate, returnDate);
-            System.out.println("Item '" + item.getTitle() + "' borrowed successfully by " + customer.getName() + "!");
+            System.out.println("\nItem '" + item.getTitle() + "' borrowed successfully by " + customer.getName() + "!");
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }

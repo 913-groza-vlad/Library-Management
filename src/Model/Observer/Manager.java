@@ -21,7 +21,7 @@ public class Manager {
 
     public void returnItem(ILibraryItem item, Customer customer) {
         if (!customer.getBorrowedItems().contains(item))
-            throw new IllegalArgumentException("\nCustomer, " + customer.getName()  + ", you do not have " + item.getTitle());
+            throw new IllegalArgumentException("\nHey, " + customer.getName()  + ", you do not have '" + item.getTitle() + "'!");
 
         customer.returnItem(item);
         borrowingManager.notifySubscribers(item);

@@ -55,8 +55,8 @@ public class SpecialItemDecorator implements LibraryItemDecorator {
     public String toString() {
         return "SpecialItem{" + wrappee.getClass().getName().substring(wrappee.getClass().getName().lastIndexOf(".") + 1) + ": " +
                 wrappee.getTitle() +
-                ", description='" + description + '\'' +
-                ", editionNumber=" + editionNumber +
+                ", description='" + getDescription() + '\'' +
+                ", editionNumber=" + getEditionNumber() +
                 '}';
     }
 }
